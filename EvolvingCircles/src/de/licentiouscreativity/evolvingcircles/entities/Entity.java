@@ -20,4 +20,10 @@ public interface Entity {
     public void stopMovingDown();
     public void stopMovingRight();
     public void stopMovingLeft();
+
+    public int getDirX();
+    public int getDirY();
+    public int getCenterX();
+    public int getCenterY();
+    public int getRadius();
 }

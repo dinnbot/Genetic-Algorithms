@@ -1,5 +1,7 @@
 package de.licentiouscreativity.evolvingcircles.entities;
 
+import de.licentiouscreativity.evolvingcircles.PopulationManager;
+
 import java.awt.*;
 
 /**
@@ -22,7 +24,17 @@ public class PlayerCircleEntity extends AbstractCircleEntity{
         }
     }
 
+    private PopulationManager populationManager;
+
     private PlayerCircleEntity(){
-        super(300, 300, 30, 30, Color.BLACK);
+        super(300, 300, 30, Color.BLACK);
+    }
+
+    @Override
+    public void update(float delta) {
+        super.update(delta);
+
+        if (populationManager == null) populationManager = PopulationManager.getInstance(); //TODO wohin?
+        populationManager.killIndividual(this);
     }
 }

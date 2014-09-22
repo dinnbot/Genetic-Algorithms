@@ -25,21 +25,25 @@ public class World {
     }
 
     private final PlayerCircleEntity player;
+    private final PopulationManager populationManager;
 
     private World() {
         player = PlayerCircleEntity.getInstance();
+        populationManager = PopulationManager.getInstance();
     }
 
     public void live(final Graphics2D g2d) {
-        update(1);
+        update(1); //TODO real delta time
         draw(g2d);
     }
 
     private void update(final float delta) {
         player.update(delta);
+        populationManager.update(delta);
     }
 
     private void draw(final Graphics2D g2d) {
         player.draw(g2d);
+        populationManager.draw(g2d);
     }
 }

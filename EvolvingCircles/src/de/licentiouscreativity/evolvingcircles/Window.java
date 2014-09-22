@@ -9,6 +9,10 @@ import java.awt.image.BufferedImage;
  */
 public class Window extends JFrame{
 
+    public final static int SCREEN_WIDTH = 800;
+    public final static int SCREEN_HEIGHT = 400;
+    public final static int SCREEN_TOP_EDGE = 24;
+
     private static volatile Window instance;
 
     public static Window getInstance() {
@@ -25,7 +29,7 @@ public class Window extends JFrame{
     private final World world;
 
     private Window() {
-        setSize(800, 480);
+        setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);

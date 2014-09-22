@@ -2,14 +2,17 @@ package de.licentiouscreativity.evolvingcircles.entities;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.BitSet;
 
 /**
  * Created by finn.meyer on 22.09.2014.
  */
 public class AICircleEntity extends AbstractCircleEntity implements Individual{
 
-    public AICircleEntity(final int posX, final int posY, final int width, final int height) {
-        super(posX, posY, width, height, Color.GRAY);
+
+
+    public AICircleEntity(final int posX, final int posY, final int radius) {
+        super(posX, posY, radius, Color.GRAY);
     }
 
     public void update(final float delta, final int pDirX, final int pDirY) {
