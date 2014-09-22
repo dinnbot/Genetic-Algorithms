@@ -29,6 +29,7 @@ public class Window extends JFrame{
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
+        addKeyListener(new Input());
 
         world = World.getInstance();
     }
@@ -37,6 +38,7 @@ public class Window extends JFrame{
     public void paint(Graphics g) {
         BufferedImage bufferedImage = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2d = bufferedImage.createGraphics();
+        super.paint(g2d);
 
         world.live(g2d);
 

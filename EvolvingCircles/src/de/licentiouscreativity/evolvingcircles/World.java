@@ -31,6 +31,15 @@ public class World {
     }
 
     public void live(final Graphics2D g2d) {
+        update(1);
+        draw(g2d);
+    }
+
+    private void update(final float delta) {
+        player.update(delta);
+    }
+
+    private void draw(final Graphics2D g2d) {
         player.draw(g2d);
     }
 }

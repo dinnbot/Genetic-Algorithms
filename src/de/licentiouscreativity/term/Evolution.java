@@ -11,7 +11,7 @@ import java.util.Random;
 public class Evolution {
 
     public final static int POP_SIZE = 400;
-    public final static float MUTATION_RATE = 0.03f;
+    public final static float MUTATION_RATE = 0.05f;
     public final static float CROSSOVER_RATE = 0.7f;
 
     private final Random random;

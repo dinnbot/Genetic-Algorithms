@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class SentenceEvolution extends AbstractEvolution{
 
     public SentenceEvolution() {
-        super(2000, 0.05f, 0.7f);
+        super(500, 0.05f, 0.7f);
     }
 
     @Override
