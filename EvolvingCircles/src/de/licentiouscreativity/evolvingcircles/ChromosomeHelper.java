@@ -1,15 +1,31 @@
 package de.licentiouscreativity.evolvingcircles;
 
 import java.util.Random;
+import java.util.function.LongBinaryOperator;
 
 /**
  * Created by finn.meyer on 22.09.2014.
  */
 public class ChromosomeHelper {
 
+    private static volatile ChromosomeHelper instance;
+
+    public static ChromosomeHelper getInstance() {
+        if (ChromosomeHelper.instance == null) {
+            createInstance();
+        }
+        return ChromosomeHelper.instance;
+    }
+
+    private static synchronized void createInstance() {
+        if (ChromosomeHelper.instance == null) {
+            ChromosomeHelper.instance = new ChromosomeHelper();
+        }
+    }
+
     private final Random random;
 
-    public ChromosomeHelper() {
+    private ChromosomeHelper() {
         random = new Random();
     }
 
@@ -32,8 +48,19 @@ public class ChromosomeHelper {
         return chromosome.toString();
     }
 
-    public float decodeToFloat(final String chromosome) {
-        int intBits = Integer.parseInt(chromosome, 2);
-        return Float.intBitsToFloat(intBits);
+    public double decodeToDouble(final String chromosome) {
+        long number = Long.parseLong(chromosome);
+        long dec = 0;
+        long po2 = 1;
+        long dig;
+
+        while (number > 0) {
+            dig = number % 10;
+            dec += dig * po2;
+            number /= 10;
+            po2 *= 2;
+        }
+        System.out.println(number);
+        return 0;
     }
 }

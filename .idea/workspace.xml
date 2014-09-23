@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4748b21b-2503-4389-9c0e-9b908030fd6c" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\workspaces\Genetic-Algorithms\EvolvingCircles\src\de\licentiouscreativity\evolvingcircles\AbstractChromosomeHelper.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Evolution.java" />
       <change type="DELETED" beforePath="C:\workspaces\Genetic-Algorithms\EvolvingCircles\src\de\licentiouscreativity\evolvingcircles\AbstractEvolution.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/AICircleEntity.java" afterPath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/AICircleEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/AbstractCircleEntity.java" afterPath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/AbstractCircleEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/Entity.java" afterPath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/PlayerCircleEntity.java" afterPath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/PlayerCircleEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/ChromosomeHelper.java" afterPath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/ChromosomeHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/Individual.java" afterPath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/Individual.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/PopulationManager.java" afterPath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/PopulationManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Window.java" afterPath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Window.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/World.java" afterPath="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/World.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Genetic-Algorithms.iws" />
@@ -37,21 +34,58 @@
       <file leaf-file-name="PopulationManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/PopulationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="1241">
-              <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1479">
+              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
-                <element signature="e#1418#1434#0" expanded="true" />
+                <element signature="e#1846#1862#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractEvolution.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/AbstractEvolution.java">
+      <file leaf-file-name="Evolution.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Evolution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20798668" vertical-offset="96" max-vertical-offset="935">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="1343">
+              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+              <folding>
+                <element signature="e#1203#1211#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="World.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+              <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="28" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AICircleEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/AICircleEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding>
+                <element signature="e#1121#1122#0" expanded="true" />
+                <element signature="e#1163#1164#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChromosomeHelper.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/ChromosomeHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.51913476" vertical-offset="521" max-vertical-offset="1190">
+              <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,17 +122,18 @@
         <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Main.java" />
         <option value="$PROJECT_DIR$/src/de/licentiouscreativity/term/Evolution.java" />
         <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Input.java" />
-        <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/Individual.java" />
         <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/World.java" />
         <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Window.java" />
         <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/Entity.java" />
         <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/AbstractCircleEntity.java" />
         <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/PlayerCircleEntity.java" />
-        <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/AICircleEntity.java" />
-        <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/PopulationManager.java" />
         <option value="$PROJECT_DIR$/src/de/licentiouscreativity/sentence/AbstractChromosomeHelper.java" />
-        <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/ChromosomeHelper.java" />
         <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/AbstractEvolution.java" />
+        <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/Individual.java" />
+        <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/PopulationManager.java" />
+        <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/AICircleEntity.java" />
+        <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Evolution.java" />
+        <option value="$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/ChromosomeHelper.java" />
       </list>
     </option>
   </component>
@@ -613,22 +648,24 @@
       <workItem from="1411108688321" duration="276000" />
       <workItem from="1411118469677" duration="9000" />
       <workItem from="1411381898319" duration="4001000" />
-      <workItem from="1411391276863" duration="7048000" />
+      <workItem from="1411391276863" duration="7444000" />
+      <workItem from="1411455828797" duration="6895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45059000" />
+    <option name="totallyTimeSpent" value="52350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1672" y="-8" width="1696" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -644,11 +681,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24969475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -676,13 +712,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="561">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Window.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="884">
@@ -918,7 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.499168" vertical-offset="0" max-vertical-offset="1054">
           <caret line="55" column="33" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,7 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.113144755" vertical-offset="51" max-vertical-offset="1122">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,7 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19800332" vertical-offset="0" max-vertical-offset="601">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -958,23 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47420964" vertical-offset="157" max-vertical-offset="969">
           <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5374376" vertical-offset="204" max-vertical-offset="918">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66056573" vertical-offset="249" max-vertical-offset="901">
-          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,7 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7637271" vertical-offset="0" max-vertical-offset="601">
           <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,48 +1016,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/Individual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/AICircleEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/de/licentiouscreativity/sentence/AbstractChromosomeHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16971713" vertical-offset="357" max-vertical-offset="1122">
           <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/ChromosomeHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6505824" vertical-offset="0" max-vertical-offset="765">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#221#222#0" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/PopulationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="1241">
-          <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
-          <folding>
-            <element signature="e#1418#1434#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1061,11 +1031,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/AbstractEvolution.java">
+    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/Individual.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20798668" vertical-offset="96" max-vertical-offset="935">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.569857" vertical-offset="9" max-vertical-offset="918">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_11/src.zip!/java/lang/Float.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="13094" max-vertical-offset="15232">
+          <caret line="849" column="31" selection-start-line="849" selection-start-column="31" selection-end-line="849" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/PopulationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1479">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="e#1846#1862#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/Evolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="1343">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding>
+            <element signature="e#1203#1211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/entities/AICircleEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1163#1164#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EvolvingCircles/src/de/licentiouscreativity/evolvingcircles/ChromosomeHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51913476" vertical-offset="521" max-vertical-offset="1190">
+          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -29,21 +29,35 @@ public class PopulationManager {
         }
     }
 
-    final List<AICircleEntity> population;
-    final Entity player;
+    private final Evolution evolution;
+    private final List<AICircleEntity> population;
+    private final Entity player;
 
-    final List<AICircleEntity> deadAIs;
+    private final List<AICircleEntity> deadAIs;
 
     private PopulationManager() {
+        evolution = Evolution.getInstance();
         population = new ArrayList<AICircleEntity>();
         deadAIs = new ArrayList<AICircleEntity>();
 
         player = PlayerCircleEntity.getInstance();
+
+        initPopulation();
+    }
+
+    private void initPopulation() {
+        List<String> chromosomes = evolution.initPopulation();
+
+        for (String chromosome : chromosomes) {
+            population.add(new AICircleEntity(100, 100, 20, chromosome));
+        }
     }
 
     public void update(final float delta) {
+        int pDirX = player.getDirX();
+        int pDirY = player.getDirY();
         for (AICircleEntity entity : population) {
-            entity.update(delta, player.getDirX(), player.getDirY());
+            entity.update(delta, pDirX, pDirY);
         }
 
         List<AICircleEntity> crossed = new ArrayList<AICircleEntity>();

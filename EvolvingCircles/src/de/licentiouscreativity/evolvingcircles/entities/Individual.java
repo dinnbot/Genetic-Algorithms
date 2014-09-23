@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public interface Individual {
 
-    void mutate();
+    String getChromosome();
 
-    ArrayList<Integer> getChromosome();
+    int getChromosomeSize();
 }
