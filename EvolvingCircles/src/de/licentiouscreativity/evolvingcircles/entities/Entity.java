@@ -21,6 +21,8 @@ public interface Entity {
     public void stopMovingRight();
     public void stopMovingLeft();
 
+    public int getPosX();
+    public int getPosY();
     public int getDirX();
     public int getDirY();
     public int getCenterX();

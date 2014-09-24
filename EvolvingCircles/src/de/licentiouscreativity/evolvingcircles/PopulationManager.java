@@ -6,7 +6,7 @@ import de.licentiouscreativity.evolvingcircles.entities.PlayerCircleEntity;
 
 import java.awt.*;
 import java.awt.geom.Arc2D;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
 
 /**
@@ -29,16 +29,25 @@ public class PopulationManager {
         }
     }
 
+    private final int populationSize = 10;
+
     private final Evolution evolution;
     private final List<AICircleEntity> population;
     private final Entity player;
 
     private final List<AICircleEntity> deadAIs;
+    List<AICircleEntity> newPopulation;
+    Map<AICircleEntity, AICircleEntity> crossed;
+    Map<AICircleEntity, AICircleEntity> crossedDelete;
 
     private PopulationManager() {
         evolution = Evolution.getInstance();
         population = new ArrayList<AICircleEntity>();
+
         deadAIs = new ArrayList<AICircleEntity>();
+        newPopulation = new ArrayList<AICircleEntity>();
+        crossed = new HashMap<AICircleEntity, AICircleEntity>();
+        crossedDelete = new HashMap<AICircleEntity, AICircleEntity>();
 
         player = PlayerCircleEntity.getInstance();
 
@@ -46,10 +55,11 @@ public class PopulationManager {
     }
 
     private void initPopulation() {
-        List<String> chromosomes = evolution.initPopulation();
+        List<String> chromosomes = evolution.initPopulation(populationSize);
+        Random random = new Random();
 
         for (String chromosome : chromosomes) {
-            population.add(new AICircleEntity(100, 100, 20, chromosome));
+            population.add(new AICircleEntity(random.nextInt(800), random.nextInt(400), 10, chromosome));
         }
     }
 
@@ -60,13 +70,31 @@ public class PopulationManager {
             entity.update(delta, pDirX, pDirY);
         }
 
-        List<AICircleEntity> crossed = new ArrayList<AICircleEntity>();
-        for (int i = 0; i < population.size(); i++) {
-            for (int j = 0; j < population.size(); j++) {
-                //if (!crossed.contains()&& population.get(i).isInside(notCrossed.get(j))) TODO paaren
-                //add crossed
+
+        for (AICircleEntity entity1 : population) {
+            if (!crossed.containsKey(entity1) && !crossed.containsValue(entity1)) {
+                for (AICircleEntity entity2 : population) {
+                    if (entity1 != entity2 && !crossed.containsKey(entity2) && !crossed.containsValue(entity2)) {
+                        if (entity1.isInside(entity2)) {
+                            crossed.put(entity1, entity2);
+                            newPopulation.add(new AICircleEntity(entity1.getPosX(), entity1.getPosY(), entity1.getRadius(), evolution.cross(entity1, entity2)));
+                        }
+                    }
+                }
             }
         }
+        population.addAll(newPopulation);
+        newPopulation.clear();
+
+        for (AICircleEntity entity1 : crossed.keySet()) {
+            AICircleEntity entity2 = crossed.get(entity1);
+            if (!entity1.isInside(entity2)) crossedDelete.put(entity1, entity2);
+        }
+        for (AICircleEntity entity1 : crossedDelete.keySet()) {
+            AICircleEntity entity2 = crossedDelete.get(entity1);
+            crossed.remove(entity1, entity2);
+        }
+        crossedDelete.clear();
 
         population.removeAll(deadAIs);
         deadAIs.clear();

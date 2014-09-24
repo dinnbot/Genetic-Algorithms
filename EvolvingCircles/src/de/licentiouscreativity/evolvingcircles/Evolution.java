@@ -27,10 +27,9 @@ public class Evolution {
         }
     }
 
-    private final int populationSize = 20;
     private final float mutationRate = 0.05f;
     private final float crossoverRate = 0.6f;
-    private final int chromosomeSize = 10;
+    private final int chromosomeSize = 20;
 
     private final Random random;
     private final ChromosomeHelper chromosomeHelper;
@@ -40,7 +39,7 @@ public class Evolution {
         chromosomeHelper = ChromosomeHelper.getInstance();
     }
 
-    public List<String> initPopulation() {
+    public List<String> initPopulation(final int populationSize) {
         List<String> population = new ArrayList<String>();
 
         for (int i = 0; i < populationSize; i++) {
@@ -64,7 +63,7 @@ public class Evolution {
     private String crossover(final Individual individual1, final Individual individual2) {
         StringBuffer chromosome = new StringBuffer();
 
-        int randomPoint = random.nextInt(chromosomeSize);
+        int randomPoint = random.nextInt(individual1.getChromosomeSize());
         int i;
         for (i = 0; i < randomPoint; i++) {
             chromosome.append(individual1.getChromosome().charAt(i));

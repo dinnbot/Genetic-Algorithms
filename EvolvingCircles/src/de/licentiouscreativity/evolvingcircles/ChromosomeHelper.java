@@ -33,7 +33,9 @@ public class ChromosomeHelper {
         char[] chromosomeArray = chromosome.toCharArray();
         int i = random.nextInt(chromosome.length());
 
-        chromosomeArray[i] = (char) (1-Character.getNumericValue(chromosomeArray[i]));
+        int newGene = 1 - Character.getNumericValue(chromosomeArray[i]);
+        
+        chromosomeArray[i] = Integer.toString(newGene).charAt(0); //TODO
 
         return String.copyValueOf(chromosomeArray);
     }
@@ -49,18 +51,22 @@ public class ChromosomeHelper {
     }
 
     public double decodeToDouble(final String chromosome) {
-        long number = Long.parseLong(chromosome);
-        long dec = 0;
-        long po2 = 1;
-        long dig;
+        double algSign = 1;
+        double preNumber = Integer.parseInt(chromosome.substring(1, 3), 2);
+        double decimalPlace = 0;
+        double completeNumber = 0;
 
-        while (number > 0) {
-            dig = number % 10;
-            dec += dig * po2;
-            number /= 10;
-            po2 *= 2;
+        if (chromosome.charAt(0) == '0') algSign = -1;
+
+        String decimalPlaceString = "0" + chromosome.substring(3);
+        int i;
+        for (i = 0; i < decimalPlaceString.length(); i++) {
+            double multi = Math.pow(2, i);
+            decimalPlace += (multi * Integer.parseInt(decimalPlaceString.substring(i, i+1)));
         }
-        System.out.println(number);
-        return 0;
+        decimalPlace /= Math.pow(2, i);
+
+        completeNumber = (preNumber + decimalPlace) * algSign;
+        return completeNumber;
     }
 }

@@ -120,6 +120,16 @@ public class AbstractCircleEntity implements Entity{
     }
 
     @Override
+    public int getPosX() {
+        return posX;
+    }
+
+    @Override
+    public int getPosY() {
+        return posY;
+    }
+
+    @Override
     public int getDirX() {
         return dirX;
     }
@@ -144,11 +154,11 @@ public class AbstractCircleEntity implements Entity{
         return radius;
     }
 
-    public double getDistanceTo(final int centerX, final int centerY, final int radius) {
-        return Math.sqrt((getCenterX() - centerX)*(getCenterX() - centerX) + (getCenterY() - centerY)*(getCenterY() - centerY));
+    public double getDistanceTo(final int centerX, final int centerY) {
+        return Math.sqrt(Math.pow(centerX - getCenterX(), 2) + Math.pow(centerY - getCenterY(), 2));
     }
 
     public boolean isInside(Entity entity) {
-        return getDistanceTo(entity.getCenterX(), entity.getCenterY(), entity.getRadius()) <= radius;
+        return getDistanceTo(entity.getCenterX(), entity.getCenterY()) - entity.getRadius() <= radius;
     }
 }

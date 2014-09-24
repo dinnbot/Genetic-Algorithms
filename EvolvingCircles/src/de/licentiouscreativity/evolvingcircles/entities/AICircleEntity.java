@@ -17,6 +17,7 @@ public class AICircleEntity extends AbstractCircleEntity implements Individual{
         this.chromosome = chromosome;
 
         ChromosomeHelper chromosomeHelper = ChromosomeHelper.getInstance();
+
         multiX = chromosomeHelper.decodeToDouble(chromosome.substring(0, (chromosome.length() + 1) / 2));
         multiY = chromosomeHelper.decodeToDouble(chromosome.substring((chromosome.length() + 1) / 2));
     }
@@ -24,7 +25,6 @@ public class AICircleEntity extends AbstractCircleEntity implements Individual{
     public void update(final float delta, final int pDirX, final int pDirY) {
         dirX = (int) (pDirX*multiX);
         dirY = (int) (pDirY*multiY);
-        System.out.println(multiX + " " + pDirY);
         super.update(delta);
     }
 
