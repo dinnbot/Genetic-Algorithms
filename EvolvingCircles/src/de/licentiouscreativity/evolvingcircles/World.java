@@ -11,6 +11,9 @@ public class World {
 
     private static volatile World instance;
 
+    private final PlayerCircleEntity player;
+    private final Population population;
+
     public static World getInstance() {
         if (World.instance == null) {
             createInstance();
@@ -24,12 +27,9 @@ public class World {
         }
     }
 
-    private final PlayerCircleEntity player;
-    private final PopulationManager populationManager;
-
     private World() {
         player = PlayerCircleEntity.getInstance();
-        populationManager = PopulationManager.getInstance();
+        population = Population.getInstance();
     }
 
     public void live(final Graphics2D g2d) {
@@ -39,11 +39,11 @@ public class World {
 
     private void update(final float delta) {
         player.update(delta);
-        populationManager.update(delta);
+        population.update(delta);
     }
 
     private void draw(final Graphics2D g2d) {
         player.draw(g2d);
-        populationManager.draw(g2d);
+        population.draw(g2d);
     }
 }

@@ -7,25 +7,25 @@ import java.awt.*;
  */
 public interface Entity {
 
-    public void update(final float delta);
+    void update(final float delta);
 
-    public void draw(final Graphics2D g2d);
+    void draw(final Graphics2D g2d);
 
-    public void moveUp();
-    public void moveDown();
-    public void moveRight();
-    public void moveLeft();
+    void moveUp();
+    void moveDown();
+    void moveRight();
+    void moveLeft();
 
-    public void stopMovingUp();
-    public void stopMovingDown();
-    public void stopMovingRight();
-    public void stopMovingLeft();
+    void stopMovingUp();
+    void stopMovingDown();
+    void stopMovingRight();
+    void stopMovingLeft();
 
-    public int getPosX();
-    public int getPosY();
-    public int getDirX();
-    public int getDirY();
-    public int getCenterX();
-    public int getCenterY();
-    public int getRadius();
+    boolean isInside(Entity entity);
+
+    int getDirX();
+    int getDirY();
+    int getRadius();
+    int getCenterX();
+    int getCenterY();
 }

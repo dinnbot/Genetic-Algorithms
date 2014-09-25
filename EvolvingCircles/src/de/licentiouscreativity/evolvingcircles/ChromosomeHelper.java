@@ -10,6 +10,8 @@ public class ChromosomeHelper {
 
     private static volatile ChromosomeHelper instance;
 
+    private final Random random;
+
     public static ChromosomeHelper getInstance() {
         if (ChromosomeHelper.instance == null) {
             createInstance();
@@ -22,8 +24,6 @@ public class ChromosomeHelper {
             ChromosomeHelper.instance = new ChromosomeHelper();
         }
     }
-
-    private final Random random;
 
     private ChromosomeHelper() {
         random = new Random();
@@ -50,15 +50,15 @@ public class ChromosomeHelper {
         return chromosome.toString();
     }
 
-    public double decodeToDouble(final String chromosome) {
+    public static double decodeToDouble(final String allele) {
         double algSign = 1;
-        double preNumber = Integer.parseInt(chromosome.substring(1, 3), 2);
+        double preNumber = Integer.parseInt(allele.substring(1, 3), 2);
         double decimalPlace = 0;
-        double completeNumber = 0;
+        double completeNumber;
 
-        if (chromosome.charAt(0) == '0') algSign = -1;
+        if (allele.charAt(0) == '0') algSign = -1;
 
-        String decimalPlaceString = "0" + chromosome.substring(3);
+        String decimalPlaceString = "0" + allele.substring(3);
         int i;
         for (i = 0; i < decimalPlaceString.length(); i++) {
             double multi = Math.pow(2, i);
@@ -68,5 +68,9 @@ public class ChromosomeHelper {
 
         completeNumber = (preNumber + decimalPlace) * algSign;
         return completeNumber;
+    }
+
+    public static int decodeToInt(final String allele) {
+        return Integer.parseInt(allele, 2);
     }
 }

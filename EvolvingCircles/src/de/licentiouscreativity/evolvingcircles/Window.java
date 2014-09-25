@@ -12,8 +12,12 @@ public class Window extends JFrame{
     public final static int SCREEN_WIDTH = 800;
     public final static int SCREEN_HEIGHT = 400;
     public final static int SCREEN_TOP_EDGE = 24;
-
+    public final static int SCREEN_BOTTOM_EDGE = SCREEN_HEIGHT;
+    public final static int SCREEN_RIGHT_EDGE = SCREEN_WIDTH;
+    public final static int SCREEN_LEFT_EDGE = 0;
     private static volatile Window instance;
+
+    private final World world;
 
     public static Window getInstance() {
         if (Window.instance == null) {
@@ -25,8 +29,6 @@ public class Window extends JFrame{
     private static synchronized void createInstance() {
         Window.instance = new Window();
     }
-
-    private final World world;
 
     private Window() {
         setSize(SCREEN_WIDTH, SCREEN_HEIGHT);

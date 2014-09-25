@@ -1,6 +1,5 @@
 package de.licentiouscreativity.evolvingcircles.entities;
 
-import de.licentiouscreativity.evolvingcircles.*;
 import de.licentiouscreativity.evolvingcircles.Window;
 
 import java.awt.*;
@@ -10,10 +9,11 @@ import java.awt.*;
  */
 public class AbstractCircleEntity implements Entity{
 
+    private static int SPEED = 1;
+
     protected int posX, posY, dirX, dirY;
-    private int speed;
-    private boolean movingUp, movingDown, movingLeft, movingRight, upInput, downInput, rightInput, leftInput;
-    protected final int radius;
+    private boolean hasUpInput, hasDownInput, hasRightInput, hasLeftInput;
+    protected int radius;
     private final Color color;
 
     public AbstractCircleEntity(final int posX, final int posY, final int radius, final Color color) {
@@ -21,23 +21,15 @@ public class AbstractCircleEntity implements Entity{
         this.posY = posY;
         this.radius = radius;
         this.color = color;
-        speed = 1;
-        movingUp = false;
-        movingDown = false;
-        movingRight = false;
-        movingLeft = false;
     }
 
+    @Override
     public void update(final float delta) {
-        posX += dirX*delta;
-        posY += dirY*delta;
-
-        if (posX < 0) posX = 0;
-        if (posX+radius*2 > Window.SCREEN_WIDTH) posX = Window.SCREEN_WIDTH-radius*2;
-        if (posY < Window.SCREEN_TOP_EDGE) posY = Window.SCREEN_TOP_EDGE;
-        if (posY+radius*2 > Window.SCREEN_HEIGHT) posY = Window.SCREEN_HEIGHT-radius*2;
+        calculateNewPosition(delta);
+        keepEntityInCanvas();
     }
 
+    @Override
     public void draw(Graphics2D g2d) {
         g2d.setColor(color);
         g2d.fillOval(posX, posY, radius*2, radius*2);
@@ -45,88 +37,62 @@ public class AbstractCircleEntity implements Entity{
 
     @Override
     public void moveUp() {
-        upInput = true;
-        movingUp = true;
-        movingDown = false;
-        dirY = -speed;
+        hasUpInput = true;
+        setDirY(-SPEED);
     }
 
     @Override
     public void moveDown() {
-        downInput = true;
-        movingDown = true;
-        movingUp = false;
-        dirY = speed;
+        hasDownInput = true;
+        setDirY(SPEED);
     }
 
     @Override
     public void moveRight() {
-        rightInput = true;
-        movingRight = true;
-        movingLeft = false;
-        dirX = speed;
+        hasRightInput = true;
+        setDirX(SPEED);
     }
 
     @Override
     public void moveLeft() {
-        leftInput = true;
-        movingLeft = true;
-        movingRight = false;
-        dirX = -speed;
+        hasLeftInput = true;
+        setDirX(-SPEED);
     }
 
     @Override
     public void stopMovingUp() {
-        upInput = false;
-        movingUp = false;
-        if (downInput) {
-            dirY = -speed;
-        } else {
-            dirY = 0;
-        }
+        hasUpInput = false;
+        if (hasDownInput)
+            moveDown();
+        else
+            stopMovingY();
     }
 
     @Override
     public void stopMovingDown() {
-        downInput = false;
-        movingDown = false;
-        if (upInput) {
-            dirY = speed;
-        } else {
-            dirY = 0;
-        }
+        hasDownInput = false;
+        if (hasUpInput)
+            moveUp();
+        else
+            stopMovingY();
     }
 
     @Override
     public void stopMovingRight() {
-        rightInput = false;
-        movingRight = false;
-        if (leftInput) {
-            dirX = -speed;
-        } else {
-            dirX = 0;
-        }
+        hasRightInput = false;
+        if (hasLeftInput)
+            moveLeft();
+        else
+            stopMovingX();
     }
 
     @Override
     public void stopMovingLeft() {
-        leftInput = false;
-        movingLeft = false;
-        if (rightInput) {
-            dirX = speed;
-        } else {
-            dirX = 0;
-        }
-    }
-
-    @Override
-    public int getPosX() {
-        return posX;
-    }
-
-    @Override
-    public int getPosY() {
-        return posY;
+        hasLeftInput = false;
+        if (hasRightInput)
+            moveRight();
+        else
+            stopMovingX();
     }
 
     @Override
@@ -140,6 +106,11 @@ public class AbstractCircleEntity implements Entity{
     }
 
     @Override
+    public int getRadius() {
+        return radius;
+    }
+
+    @Override
     public int getCenterX() {
         return posX+radius;
     }
@@ -149,16 +120,43 @@ public class AbstractCircleEntity implements Entity{
         return posY+radius;
     }
 
-    @Override
-    public int getRadius() {
-        return radius;
-    }
-
-    public double getDistanceTo(final int centerX, final int centerY) {
-        return Math.sqrt(Math.pow(centerX - getCenterX(), 2) + Math.pow(centerY - getCenterY(), 2));
-    }
-
     public boolean isInside(Entity entity) {
         return getDistanceTo(entity.getCenterX(), entity.getCenterY()) - entity.getRadius() <= radius;
     }
+
+    private void setDirX(final int dirX) {
+        this.dirX = dirX;
+    }
+
+    private void setDirY(final int dirY) {
+        this.dirY = dirY;
+    }
+
+    private void calculateNewPosition(final float delta) {
+        posX += dirX*delta;
+        posY += dirY*delta;
+    }
+
+    private void keepEntityInCanvas() {
+        if (posX < Window.SCREEN_LEFT_EDGE) setPosX(Window.SCREEN_LEFT_EDGE);
+        if (getRightPosX() > Window.SCREEN_RIGHT_EDGE) setPosX(Window.SCREEN_RIGHT_EDGE-radius*2);
+        if (posY < Window.SCREEN_TOP_EDGE) setPosY(Window.SCREEN_TOP_EDGE);
+        if (getBottomPosY() > Window.SCREEN_BOTTOM_EDGE) setPosY(Window.SCREEN_BOTTOM_EDGE-radius*2);
+    }
+
+    private int getRightPosX() { return posX + (radius * 2); }
+
+    private int getBottomPosY() { return posY + (radius * 2); }
+
+    private void setPosX(final int posX) { this.posX = posX; }
+
+    private void setPosY(final int posY) { this.posY = posY; }
+
+    private double getDistanceTo(final int centerX, final int centerY) {
+        return Math.sqrt(Math.pow(centerX - getCenterX(), 2) + Math.pow(centerY - getCenterY(), 2));
+    }
+
+    private void stopMovingX() { setDirX(0); }
+
+    private void stopMovingY() { setDirY(0); }
 }
