@@ -9,8 +9,8 @@ import java.awt.image.BufferedImage;
  */
 public class Window extends JFrame{
 
-    public final static int SCREEN_WIDTH = 800;
-    public final static int SCREEN_HEIGHT = 400;
+    public final static int SCREEN_WIDTH = 1000;
+    public final static int SCREEN_HEIGHT = 1000;
     public final static int SCREEN_TOP_EDGE = 24;
     public final static int SCREEN_BOTTOM_EDGE = SCREEN_HEIGHT;
     public final static int SCREEN_RIGHT_EDGE = SCREEN_WIDTH;
